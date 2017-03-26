@@ -1,0 +1,13 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Top Level Methods
+GET         /list/*path                 controllers.ListController.getList(path)
+POST        /list/*path                 controllers.ListController.postValue(path)
+PUT         /list/*path                 controllers.ListController.putList(path)
+DELETE      /list/*path                 controllers.ListController.deleteList(path)
+
+# Helper Methods
+GET         /post/*path/*value          controllers.ListController.addItem(path, value)
+GET         /full                       controllers.ListController.dumpHash()
