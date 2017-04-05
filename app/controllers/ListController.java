@@ -2,6 +2,8 @@ package controllers;
 
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.*;
+import views.html.*;
 
 import java.io.*;
 import java.net.URLDecoder;
@@ -22,6 +24,10 @@ public class ListController extends Controller {
         catch(IOException e) {
             System.out.println("exception: " + e);
         }
+    }
+
+    public Result index() {
+        return ok(index.render());
     }
 
     //Helper Methods
