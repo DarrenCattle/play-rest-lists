@@ -82,6 +82,11 @@ public class ListController extends Controller {
 
     public Result postValue(String path) {
         String item = request().body().asText();
+        if(item==null) {
+            Map<String, String[]> form = request().body().asFormUrlEncoded();
+            item = (String) form.keySet().toArray()[0];
+            if(item==null) {return null;}
+        }
         ArrayList<String> list = getValue(path);
         list.add(item);
         setValue(path, list);
