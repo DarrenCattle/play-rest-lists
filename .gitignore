@@ -1,9 +1,10 @@
 /.idea
 /.idea_modules
 /.classpath
-/.project
 /.settings
-project
 target
 logs
 lists.hash
+
+project/.sbtserver
+project/.sbtserver.lock
